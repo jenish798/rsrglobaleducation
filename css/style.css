@@ -53,6 +53,10 @@ body {
   margin: 0;
   /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
   /* font-family: "Roboto", Helvetica, Arial, sans-serif; */
+  user-select: none;  /* For modern browsers */
+      -webkit-user-select: none; /* For Safari */
+      -moz-user-select: none; /* For Firefox */
+      -ms-user-select: none; /* For IE/Edge */
   font-family: "Raleway", Sans-serif;
   font-size: 1rem;
   font-weight: 400;
@@ -8298,6 +8302,7 @@ h1, h2, h3, h4, h5,
     left: 0;
     top: 0;
     margin-top: -130px;
+    color: #000;
     background: #fff !important;
     -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1); }
@@ -8336,7 +8341,7 @@ h1, h2, h3, h4, h5,
         padding-right: 0rem !important; } }
     .ftco-navbar-light.scrolled .navbar-toggler {
       border: none;
-      color: rgba(0, 0, 0, 0.5) !important;
+      /* color: rgba(0, 0, 0, 0.5) !important; */
       border-color: rgba(0, 0, 0, 0.5) !important;
       cursor: pointer;
       padding-right: 0;
@@ -9166,7 +9171,7 @@ h1, h2, h3, h4, h5,
 
 .ftco-section-parallax {
   position: relative; }
-  .ftco-section-parallax .heading-section-white h2 {
+  .ftco-section-parallax .heading-section-white h4 {
     font-weight: 400 !important; }
 
 /* .ftco-degree-bg {
@@ -9303,9 +9308,9 @@ textarea.form-control {
     .ftco-footer a:hover {
       color: #fff; }
   .ftco-footer .ftco-heading-2 {
-    font-size: 17px;
-    font-weight: 400;
-    color: #000000; }
+    font-size: 19px;
+    font-weight: 600;
+    color: #ffffff; }
 
 .ftco-footer-social li {
   list-style: none;
@@ -9425,18 +9430,18 @@ textarea.form-control {
     letter-spacing: 2px;
     text-transform: uppercase; }
 
-.heading-section h2 {
-  font-size: 40px;
+.heading-section h4 {
+  font-size: 28px;
   font-weight: 600; }
   @media (max-width: 767.98px) {
-    .heading-section h2 {
+    .heading-section h4 {
       font-size: 28px; } }
 
 .heading-section.heading-section-white .subheading {
   color: rgba(255, 255, 255, 0.9); }
 
-.heading-section.heading-section-white h2 {
-  font-size: 40px;
+.heading-section.heading-section-white h4 {
+  font-size: 28px;
   color: #fff; }
 
 .heading-section.heading-section-white p {
@@ -11071,9 +11076,18 @@ font-size: 20;
 
 /* Hover effect for icon */
 .icon-container a:hover {
-  background: rgba(0, 0, 0, 0.7); /* Darker background on hover */
+  background: rgba(0, 0, 0, 0.7); 
+  /* Darker background on hover */
 }
 
 .custom-logo {
   width: 30%;
+}
+
+.box-style {
+  background-color: rgba(0, 0, 0, 0.3); /* Light black background */
+  display: inline-block; /* Box effect around the text */
+  padding: 10px 20px; /* Space around the text */
+  border-radius: 5px; /* Optional: rounded corners */
+  color: #333; /* Text color */
 }

@@ -328,6 +328,12 @@
 	};
 	OnePageNav();
 
+	 /**
+   * Right click disable
+   */
+
+	 document.addEventListener('contextmenu',event =>event.preventDefault())
+
 
 	// magnific popup
 	$('.image-popup').magnificPopup({
