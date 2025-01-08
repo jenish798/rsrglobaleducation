@@ -3498,8 +3498,8 @@ border-radius: 15px; }
   padding-bottom: 0.5rem; }
 
 .navbar-collapse {
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
@@ -8180,10 +8180,12 @@ h1, h2, h3, h4, h5,
 .ftco-navbar-light {
   background: transparent !important;
   /* position: absolute; */
-  top: 20px;
+  /* top: 20px; */
   left: 0;
   right: 0;
-  z-index: 3; }
+  z-index: 3;
+  /* margin-top: 30px; */
+ }
   @media (max-width: 991.98px) {
     .ftco-navbar-light {
       background: #000000 !important;
@@ -10181,6 +10183,28 @@ ul.aboutcustom-list li::before {
     background-color: #393BA7;
     border-radius: 15%;
 }
+
+@media (max-width: 1024px) {
+    .course-card {
+        margin: 10px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .course-card {
+        margin: 8px;
+        padding: 16px;
+    }
+}
+
+@media (max-width: 575px){
+    .course-card {
+        margin: 5px;
+        padding: 10px;
+    }
+}
+
 .course-card:hover {
     transform: scale(1.05);
 }
@@ -11090,4 +11114,13 @@ font-size: 20;
   padding: 10px 20px; /* Space around the text */
   border-radius: 5px; /* Optional: rounded corners */
   color: #333; /* Text color */
+}
+
+/*--------------------------------------------------------------
+# contact-form placeholder
+--------------------------------------------------------------*/
+
+.placeholder-option {
+  font-weight:100;
+  color: #6c757d; /* Optional: A muted text color */
 }
