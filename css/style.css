@@ -11104,9 +11104,11 @@ font-size: 20;
   /* Darker background on hover */
 }
 
-.custom-logo {
+/* .custom-logo {
   width: 30%;
-}
+} */
+
+
 
 .box-style {
   background-color: rgba(0, 0, 0, 0.3); /* Light black background */
