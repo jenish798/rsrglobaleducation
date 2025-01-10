@@ -7,8 +7,8 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 // Collect form data
-// $to = ["training@rsrglobal.org"];
-$to = ["solomonjenish@gmail.com"];
+$to = ["education@rsrglobal.org"];
+// $to = ["solomonjenish@gmail.com"];
 $from = $_POST['email'];
 $name = $_POST['name'];
 $contact_number = $_POST['contact_number'];

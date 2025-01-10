@@ -71,6 +71,7 @@
           form_data.append(key, formData[key]);
       }
       console.log(form_data);
+      console.log(action)
       fetch(action, {
         method: 'POST',
         body: form_data,
