@@ -9243,6 +9243,10 @@ h1, h2, h3, h4, h5,
   .ftco-section-parallax .heading-section-white h4 {
     font-weight: 400 !important; }
 
+  .ftco-section p {
+    text-align: justify;
+  }  
+
 /* .ftco-degree-bg {
   position: relative; }
   .ftco-degree-bg:after {
@@ -10759,11 +10763,35 @@ font-size: 20;
   margin-bottom: 15px;
   border: 1px solid black;
   border-radius: 5px;
-  transition: all 0.3s ease-in-out; /* Smooth transition on hover */
-  overflow: hidden;}
+  overflow: hidden;  /* Hide overflow content initially */
+  height: 60px;      /* Initial height when not hovered */
+  transition: height 0.3s ease-in-out;  /* Smooth height transition */
+}
 
 .faq .faq-container .faq-item:last-child {
   margin-bottom: 0;
+}
+
+/* When hovered, expand the height and show the content */
+.faq .faq-container .faq-item:hover {
+  height: auto;      /* Allow the height to expand on hover */
+}
+
+/* Transition for the content (text) visibility */
+.faq .faq-container .faq-item .faq-content {
+  max-height: 0;     /* Initially collapse the content */
+  opacity: 0;        /* Initially hide the content */
+  overflow: hidden;  /* Hide content overflow */
+  visibility: hidden; /* Hide it completely */
+  transition: max-height 1.5s ease-in-out, opacity 0.3s ease-in-out, visibility 0s 1.5s;  /* Smooth transitions */
+}
+
+/* When hovered, reveal the content */
+.faq .faq-container .faq-item:hover .faq-content {
+  max-height: 500px;  /* Set max height to an arbitrary large value */
+  opacity: 1;         /* Make the content visible */
+  visibility: visible;  /* Ensure visibility */
+  transition: max-height 1.5s ease-in-out, opacity 0.3s ease-in-out, visibility 1s;  /* Transition visibility immediately */
 }
 
 .faq .faq-container .faq-item h3 {
@@ -10786,19 +10814,6 @@ font-size: 20;
   color: var(--accent-color);
 }
 
-.faq .faq-container .faq-item .faq-content {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: 0.3s ease-in-out;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.faq .faq-container .faq-item .faq-content p {
-  margin-bottom: 0;
-  overflow: hidden;
-}
-
 .faq .faq-container .faq-item .faq-toggle {
   position: absolute;
   top: 20px;
@@ -10813,26 +10828,7 @@ font-size: 20;
   color: var(--accent-color);
 }
 
-.faq .faq-container .faq-active {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 97%);
-  border-color: color-mix(in srgb, var(--accent-color), transparent 80%);
-}
 
-.faq .faq-container .faq-active h3 {
-  color: var(--accent-color);
-}
-
-.faq .faq-container .faq-active .faq-content {
-  grid-template-rows: 1fr;
-  visibility: visible;
-  opacity: 1;
-  padding-top: 10px;
-}
-
-.faq .faq-container .faq-active .faq-toggle {
-  transform: rotate(90deg);
-  color: var(--accent-color);
-}
 
 .italic-heading {
   font-style: italic;
@@ -11192,4 +11188,30 @@ font-size: 20;
 .placeholder-option {
   font-weight:100;
   color: #6c757d; /* Optional: A muted text color */
+}
+
+/*--------------------------------------------------------------
+# thankyou-message
+--------------------------------------------------------------*/
+
+.thank-you-bg{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fefefe;
+}
+
+.message {
+  text-align: center;
+  font-size: 2.5em;
+  width: 50%;
+  color: #0f0e0e;
+}
+
+.php-email-form1 .select_option select{
+  padding: 10px;
 }
