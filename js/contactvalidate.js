@@ -91,18 +91,19 @@
         console.log(data);
         if (data == 'ok') {
           console.log('click');
-          setTimeout(function() {
+          setTimeout(() => {
             thisForm.querySelector('.loading').classList.remove('d-block');
             window.location.href = 'thank-you.html';  // Redirect after a delay
-          }, 3000);
+          }, 1000);
       
           // Optionally, reset the form after the delay
-          setTimeout(function() {
+          setTimeout(() => {
             thisForm.reset();
           }, 3000);
         }
       })
       .catch((error) => {
+        thisForm.querySelector('.loading').classList.remove('d-block');
         displayError(thisForm, error);
       });
     }
