@@ -53,10 +53,10 @@ body {
   margin: 0;
   /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
   /* font-family: "Roboto", Helvetica, Arial, sans-serif; */
-  /* user-select: none;  
+  user-select: none;  
       -webkit-user-select: none; 
       -moz-user-select: none; 
-      -ms-user-select: none;  */
+      -ms-user-select: none; 
   font-family: "Raleway", Sans-serif;
   font-size: 1rem;
   font-weight: 400;
@@ -3461,7 +3461,8 @@ border-radius: 15px; }
     align-items: center;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between; }
+    justify-content: space-between; 
+  }
 
 .navbar-brand {
   display: inline-block;
@@ -10743,7 +10744,8 @@ font-size: 20;
 
 /* YouTube */
 .social-icon-link[href*="youtube"] {
-  background-color: #FF0000; /* YouTube Red color */
+  background-color: #FF0000; 
+  /* YouTube Red color */
 }
 
 /* .social-icon-link[href*="youtube"]:hover {
